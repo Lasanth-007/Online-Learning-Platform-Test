@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Online-Learning-Platform
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: ${L_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/learning_platform
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
