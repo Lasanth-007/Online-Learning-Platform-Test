@@ -13,6 +13,7 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 )
 public interface EnrollmentMapper {
 
+
     @Mapping(target = "userId", source = "id.userId")
     @Mapping(target = "courseId", source = "id.courseId")
     @Mapping(target = "userFullName", source = "user.fullName")

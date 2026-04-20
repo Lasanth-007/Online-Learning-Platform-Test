@@ -1,11 +1,12 @@
 package learn.onlinelearningplatform.mapper;
 
 import learn.onlinelearningplatform.Entity.Lecture;
+import learn.onlinelearningplatform.dto.lecture.LecturePatchDto;
 import learn.onlinelearningplatform.dto.lecture.LectureResponseDto;
 import learn.onlinelearningplatform.dto.lecture.LectureCreateDto;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.*;
+
+import java.util.List;
 
 @Mapper(
     componentModel = "spring",
@@ -18,8 +19,23 @@ public interface LectureMapper {
     @Mapping(target = "resource", source = "resource")
     LectureResponseDto toResponseDto(Lecture lecture);
 
+    @Mapping(target = "sectionId", source = "section.id")
+    @Mapping(target = "resource", source = "resource")
+    List<LectureResponseDto> toResponseDtoList(List<Lecture> lectures);
+
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "section", ignore = true)     // set in service
-    @Mapping(target = "resource", source = "resource")
+    @Mapping(target = "resource", ignore = true)
     Lecture toEntity(LectureCreateDto dto);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "section", ignore = true)
+    @Mapping(target = "resource", ignore = true)
+    void patchLecture(LecturePatchDto dto, @MappingTarget Lecture lecture);
+
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "section", ignore = true)
+    @Mapping(target = "resource", ignore = true)
+    void updateLecture(LectureCreateDto dto, @MappingTarget Lecture lecture);
 }
