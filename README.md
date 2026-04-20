@@ -32,7 +32,7 @@ src/main/java/learn/onlinelearningplatform/
 ├── 📁 repository/  # Spring Data JPA Repositories (Data Access Layer)
 ├── 📁 service/     # Business Logic & Service Interfaces
 └── 📄 OnlineLearningPlatformApplication.java  # Main Application Entry Point
-
+```
 
 ## Main Entities
 
@@ -44,7 +44,7 @@ src/main/java/learn/onlinelearningplatform/
 - **Enrollment** - Join entity between User and Course
 - **BaseEntity** - Common audit fields
 
-```
+
 
 ## API Endpoints
 
