@@ -49,13 +49,13 @@ src/main/java/learn/onlinelearningplatform/
 ## API Endpoints
 
 ### 👤 Users
-`POST /users` - Create user
-`GET /users` - Get all users
-`GET /users/{id}` - Get user by ID
-`GET /users/email/{email}` - Get user by email
-`PUT /users/{id}` - Update user (Full update)
-`PATCH /users/{id}` - Patch user (Partial update)
-`DELETE /users/{id}` - Delete user
+- `POST /users` - Create user
+- `GET /users` - Get all users
+- `GET /users/{id}` - Get user by ID
+- `GET /users/email/{email}` - Get user by email
+- `PUT /users/{id}` - Update user (Full update)
+- `PATCH /users/{id}` - Patch user (Partial update)
+- `DELETE /users/{id}` - Delete user
 
 ### 📚 Courses
 - `POST /api/courses` - Create course
@@ -64,25 +64,25 @@ src/main/java/learn/onlinelearningplatform/
 - `GET /api/courses/instructor/{instructorId}` - Get courses by instructor
 
 ### 📑 Sections
-`POST /api/sections` - Create section
-`GET /api/sections/course/{courseId}` - Get sections by course ID
-`GET /api/sections/{id}` - Get section by ID
-`PUT /api/sections/{id}` - Update section
-`PATCH /api/sections/{id}` - Patch section
-`DELETE /api/sections/{id}` - Delete section
+- `POST /api/sections` - Create section
+- `GET /api/sections/course/{courseId}` - Get sections by course ID
+- `GET /api/sections/{id}` - Get section by ID
+- `PUT /api/sections/{id}` - Update section
+- `PATCH /api/sections/{id}` - Patch section
+- `DELETE /api/sections/{id}` - Delete section
 
 ### 👨‍🏫 Lectures
-`POST /api/lectures` - Create lecture
-`GET /api/lectures/{id}` - Get lecture by ID
-`PUT /api/lectures/{id}` - Update lecture
-`PATCH /api/lectures/{id}` - Patch lecture
-`DELETE /api/lectures/{id}` - Delete lecture
+- `POST /api/lectures` - Create lecture
+- `GET /api/lectures/{id}` - Get lecture by ID
+- `PUT /api/lectures/{id}` - Update lecture
+- `PATCH /api/lectures/{id}` - Patch lecture
+- `DELETE /api/lectures/{id}` - Delete lecture
 
 ### 🧐 Enrollments
-`POST /api/enrollments` - Enroll user in course
-`GET /api/enrollments/user/{userId}` - Get user's enrollments
-`GET /api/enrollments/course/{courseId}` - Get course's enrollments
-`DELETE /api/enrollments/user/{userId}/course/{courseId}` - Unenroll
+- `POST /api/enrollments` - Enroll user in course
+- `GET /api/enrollments/user/{userId}` - Get user's enrollments
+- `GET /api/enrollments/course/{courseId}` - Get course's enrollments
+- `DELETE /api/enrollments/user/{userId}/course/{courseId}` - Unenroll
 
 ## ⚙️ Setup Instructions
 
