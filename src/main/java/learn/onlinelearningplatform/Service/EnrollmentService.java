@@ -40,9 +40,13 @@ public class EnrollmentService {
             throw new RuntimeException("User is already enrolled in this course");
         }
 
-        Enrollment enrollment = enrollmentRepository.save
-                (enrollmentMapper.toEntity(dto,user,course));
-        return enrollmentMapper.toResponseDto(enrollment);
+        Enrollment enrollment = enrollmentMapper.toEntity(dto,user,course);
+
+        EnrollmentId id = new EnrollmentId(user.getId(), course.getId());
+        enrollment.setId(id);
+
+        return enrollmentMapper.toResponseDto
+                (enrollmentRepository.save(enrollment));
     }
 
     public List<EnrollmentResponseDto> getEnrollmentsByUser(Long userId) {
