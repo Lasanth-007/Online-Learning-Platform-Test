@@ -1,4 +1,4 @@
-# CodeAcademy - Online Learning Platform
+Online Learning Platform
 
 A mini **Online Learning Platform** 
 
