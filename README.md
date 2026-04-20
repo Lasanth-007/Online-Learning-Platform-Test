@@ -44,6 +44,8 @@ src/main/java/learn/onlinelearningplatform/
 - **Enrollment** - Join entity between User and Course
 - **BaseEntity** - Common audit fields
 
+```
+
 ## API Endpoints
 
 ### 👤 Users
@@ -88,6 +90,9 @@ src/main/java/learn/onlinelearningplatform/
 2. Create a PostgreSQL database named `learning_platform`
 3. Update `application.yaml` with your database credentials
 4. Run the application
+5. Once the application is running, you can explore and test the APIs 
+   through the interactive Swagger UI:
+🔗 Swagger UI: http://localhost:8080/swagger-ui.html
 
 The application will automatically create the necessary tables using JPA.
 
